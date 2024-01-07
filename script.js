@@ -1,6 +1,43 @@
-const template = document.getElementById('user-template');
+const userInfoList = [
+    {
+        image:"https://cdn-icons-png.flaticon.com/128/3940/3940446.png",
+        name:"John Doe",
+        email:null,
+        age:"28 years old",
+        info:"A passionate wildlife enthusiast and photographer often found exploring nature."
+    },
+    {
+        image:"https://cdn-icons-png.flaticon.com/128/4128/4128176.png",
+        name:"Jane Smith",
+        email:"janesmith@example.com",
+        age:null,
+        info:"An avid reader and aspiring novelist, Jane loves spending her weekends at local cafes."
+    },
+    {
+        image:null,
+        name:null,
+        email:"mikebrown@example.com",
+        age:"45 years old",
+        info:null
+    },
+    {
+        image:"https://cdn-icons-png.flaticon.com/128/4333/4333609.png",
+        name:"Sarah Johnson",
+        email:"sarahjohnson@example.com",
+        age:"30 years old",
+        info:"Tech-savvy and innovative, Sarah is known for her cutting-edge software solutions."
+    },
+    {
+        image:null,
+        name:"Alex Martinez",
+        email:null,
+        age:"27 years old",
+        info:"A fitness enthusiast, Alex enjoys hiking and participating in marathons around the country"
+    },
 
-const copies = 5;
+]
+const template = document.getElementById('user-template');
+const copies = userInfoList.length
 
 for(let i=0; i<copies; i++){
     const clone = document.importNode(template.content, true);
@@ -18,34 +55,11 @@ for(let i=0; i<copies; i++){
         card.remove();
     })
 
-    if(i===0){
-        imageElement.src="https://cdn-icons-png.flaticon.com/128/3940/3940446.png"
-        name.textContent = "John Doe";
-        age.textContent = "28 years old";
-        info.textContent = "A passionate wildlife enthusiast and photographer often found exploring nature."
-    }
-    else if(i===1){
-        imageElement.src="https://cdn-icons-png.flaticon.com/128/4128/4128176.png"
-        name.textContent = "Jane Smith";
-        email.textContent = "janesmith@example.com";
-        info.textContent = "An avid reader and aspiring novelist, Jane loves spending her weekends at local cafes."
-    }
-    else if(i===2){
-        email.textContent = "mikebrown@example.com";
-        age.textContent = "45 years old";
-        info.textContent = "tech savvy and innovative, Sarah is known for her cutting-edge software solutions."
-    }
-    else if(i===3){
-        imageElement.src="https://cdn-icons-png.flaticon.com/128/4333/4333609.png"
-        name.textContent = "Sarah Johnson";
-        email.textContent = "sarahjohnson@example.com";
-        age.textContent = "30 years old";
-        info.textContent = "A fitness enthusiast, Alex enjoys hiking and participating in marathons around the country"
-    }
-    else if(i===4){
-        name.textContent = "Alex Martinez";
-        age.textContent = "27 years old"
-    }
+    imageElement.src=userInfoList[i].image;
+    name.textContent=userInfoList[i].name;
+    email.textContent=userInfoList[i].email;
+    age.textContent=userInfoList[i].age;
+    info.textContent=userInfoList[i].info;
 
     document.body.appendChild(clone)
 }
