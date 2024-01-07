@@ -1,0 +1,24 @@
+*{
+    font-family:Arial, Helvetica, sans-serif
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.user-container{
+    background-color: #faf9f6ea;
+    margin:2rem;
+    position:relative;
+    width:300px;
+    padding:20px;
+    border-radius: .5rem;
+    box-shadow: 1px 2px 3px 4px rgba(146, 144, 144, 0.3);
+}
+
+.xButton{
+    position:absolute;
+    top:5px;
+    right:5px;
+}
