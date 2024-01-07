@@ -6,11 +6,11 @@ body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    padding:5rem
+    padding:10rem
 }
 .user-container{
     background-color: #faf9f6ea;
-    margin:2rem;
+    margin:.9rem;
     position:relative;
     width:300px;
     padding:20px;
@@ -24,6 +24,20 @@ body{
 
 .xButton{
     position:absolute;
-    top:5px;
-    right:5px;
+    top:10px;
+    right:10px;
+    color: rgb(189, 183, 183);
+    font-weight: 900;
+    cursor:pointer;
+}
+
+.left:hover{
+    transform:rotate(-4deg) scale(1.12);
+    z-index: 1;
+}
+
+.right:hover{
+    transform: rotate(4deg) scale(1.12);
+    z-index: 1;
+    
 }

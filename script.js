@@ -41,6 +41,7 @@ const copies = userInfoList.length
 
 for(let i=0; i<copies; i++){
     const clone = document.importNode(template.content, true);
+    const card = clone.querySelector('.user-container');
     const imageElement = clone.querySelector('.user-image');
     imageElement.style.width = "100px"
     const name = clone.querySelector('.user-name');
@@ -60,6 +61,8 @@ for(let i=0; i<copies; i++){
     email.textContent=userInfoList[i].email;
     age.textContent=userInfoList[i].age;
     info.textContent=userInfoList[i].info;
+
+    i%2===0?card.classList.add('right'):card.classList.add('left')
 
     document.body.appendChild(clone)
 }
